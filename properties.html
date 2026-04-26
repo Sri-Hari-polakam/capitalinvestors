@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | CAPITAL INVESTORS</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 glass-dark">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-widest text-white font-playfair uppercase">
+                CAPITAL<span class="text-luxury-gold">INVESTORS</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-widest text-white/80">
+                <a href="index.html" class="hover:text-luxury-gold transition-colors font-semibold">Home</a>
+                <a href="properties.html" class="text-luxury-gold font-semibold border-b border-luxury-gold pb-1">Properties</a>
+                <a href="about.html" class="hover:text-luxury-gold transition-colors font-semibold">About Us</a>
+                <a href="contact.html" class="hover:text-luxury-gold transition-colors font-semibold">Contact</a>
+                <a href="pdf/Golden Gate Final Brochure.pdf" download class="gold-bg-gradient text-black px-6 py-2 rounded-full font-bold flex items-center gap-2">
+                    <i class="fas fa-file-download text-sm"></i> Brochure
+                </a>
+            </div>
+            
+            <button class="md:hidden text-white" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] glass-dark transform translate-x-full transition-transform duration-500 md:hidden">
+        <div class="flex flex-col h-full p-8">
+            <div class="flex justify-between items-center mb-16">
+                <a href="index.html" class="text-2xl font-bold tracking-widest text-white font-playfair uppercase">
+                    CAPITAL<span class="text-luxury-gold">INVESTORS</span>
+                </a>
+                <button id="close-menu" class="text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="flex flex-col gap-8 text-center">
+                <a href="index.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">Home</a>
+                <a href="properties.html" class="text-3xl font-bold text-luxury-gold font-playfair">Properties</a>
+                <a href="about.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">About Us</a>
+                <a href="contact.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">Contact</a>
+            </div>
+            
+            <div class="mt-auto pt-10 border-t border-white/10 flex justify-center gap-8">
+                <a href="https://instagram.com" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:concierge@capitalinvestors.com" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-20 bg-luxury-dark text-white text-center">
+        <div class="max-w-7xl mx-auto px-6" data-aos="fade-down">
+            <h1 class="text-5xl font-bold font-playfair mb-4">Our <span class="italic text-luxury-gold">Collection</span></h1>
+            <p class="text-white/40 max-w-xl mx-auto font-light">Explore a curated selection of the most prestigious properties across the region.</p>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="py-8 border-b border-gray-100 sticky top-[72px] bg-white z-40">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex gap-4 overflow-x-auto pb-2 md:pb-0">
+                <button class="filter-btn bg-luxury-dark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest active" data-filter="all">All</button>
+                <button class="filter-btn bg-gray-100 text-gray-400 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200" data-filter="Vijayawada">Vijayawada</button>
+                <button class="filter-btn bg-gray-100 text-gray-400 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200" data-filter="Amaravati">Amaravati</button>
+                <button class="filter-btn bg-gray-100 text-gray-400 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200" data-filter="Guntur">Guntur</button>
+                <button class="filter-btn bg-gray-100 text-gray-400 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200" data-filter="Bapatla">Bapatla</button>
+            </div>
+            <div class="relative w-full md:w-80">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-sm"></i>
+                <input type="text" id="project-search" placeholder="Search by project name..." class="w-full bg-gray-50 border border-gray-100 pl-12 pr-6 py-3 rounded-full outline-none focus:border-luxury-gold">
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Card 1: Sun Siri Golden Gate -->
+                <div class="property-card group" data-location="Guntur" data-aos="fade-up">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/4ce7e3f4-4c9d-4b25-925d-34b9d053c340/media__1777185247520.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/Golden Gate Final Brochure.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">Sun Siri Golden Gate</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Guntur, IRR Phase-3
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Premium</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Alohaa Beach Resort -->
+                <div class="property-card group" data-location="Bapatla" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/4ce7e3f4-4c9d-4b25-925d-34b9d053c340/media__1777185378361.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/Sri Bhramara Alohaa Broucher.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">Alohaa Beach Resort</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Bapatla Coast
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Savvy</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Cottages & Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Ajanthaa -->
+                <div class="property-card group" data-location="Bapatla" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/4ce7e3f4-4c9d-4b25-925d-34b9d053c340/media__1777185660878.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/SBT_Ajanthaa Brochure_Booklet.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">SBT Ajanthaa</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Suryalanka Road, Bapatla
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Luxury</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Duplex & Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Regal City -->
+                <div class="property-card group" data-location="Vijayawada" data-aos="fade-up">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/4ce7e3f4-4c9d-4b25-925d-34b9d053c340/regal_city_clear_1777186702450.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/Regal City_Final.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">Regal City</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Poranki, Vijayawada
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Elite</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Open Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: The Lotus -->
+                <div class="property-card group" data-location="Amaravati" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/4ce7e3f4-4c9d-4b25-925d-34b9d053c340/media__1777185782195.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/Sunsiri The Lotus Brochure.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">The Lotus</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Ponnekallu, Amaravati
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Future</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Villa Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: The Icon -->
+                <div class="property-card group" data-location="Amaravati" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/049bbdc1-1ce0-477a-9e68-b87366b543a7/real_estate_plot_3_1777110906437.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/The Icon Folder_19-06-24-V4.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">The Icon</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Tadikonda, Amaravati
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Iconic</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Premium Plots</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: The Meadows -->
+                <div class="property-card group" data-location="Vijayawada" data-aos="fade-up">
+                    <div class="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                        <img src="C:/Users/23000/.gemini/antigravity/brain/049bbdc1-1ce0-477a-9e68-b87366b543a7/real_estate_plot_4_1777110921905.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <a href="detail.html" class="flex-1 bg-white text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:bg-gray-50 transition-colors uppercase text-[10px] tracking-widest flex items-center justify-center">View Details</a>
+                            <a href="pdf/The Meadows draft brochure 09-05-25.pdf" download class="w-14 bg-luxury-gold text-black py-4 rounded-2xl font-bold text-center shadow-2xl hover:scale-105 transition-transform flex items-center justify-center" title="Download Brochure">
+                                <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold font-playfair mb-1">The Meadows</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-xs">
+                                <i class="fas fa-location-dot text-[10px]"></i> Ganguru, Vijayawada
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-luxury-gold font-playfair">Nature</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Villa Enclave</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-dark text-white pt-24 pb-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-center md:text-left">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="text-2xl font-bold tracking-widest text-white mb-6 block font-playfair uppercase">
+                        CAPITAL<span class="text-luxury-gold">INVESTORS</span>
+                    </a>
+                    <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-xs mx-auto md:mx-0">
+                        The pinnacle of luxury real estate. Crafting timeless legacies and finding sanctuaries for the world's most discerning clientele.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-luxury-gold">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-white/60">
+                        <li><a href="index.html" class="hover:text-luxury-gold transition-colors">Home</a></li>
+                        <li><a href="properties.html" class="hover:text-luxury-gold transition-colors">Properties</a></li>
+                        <li><a href="about.html" class="hover:text-luxury-gold transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-luxury-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-luxury-gold">Contact</h4>
+                    <ul class="space-y-4 text-sm text-white/60">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-location-dot text-luxury-gold text-sm"></i> Andhra Pradesh – 523108
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-phone text-luxury-gold text-sm"></i> +91 99085 01197
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-envelope text-luxury-gold text-sm"></i> concierge@capitalinvestors.com
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-luxury-gold">Follow Us</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://instagram.com/capitalinvestors" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-luxury-gold hover:border-luxury-gold transition-all" title="Instagram"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="https://wa.me/919908501197" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-luxury-gold hover:border-luxury-gold transition-all" title="WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
+                        <a href="mailto:concierge@capitalinvestors.com" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-luxury-gold hover:border-luxury-gold transition-all" title="Gmail"><i class="far fa-envelope text-lg"></i></a>
+                        <a href="https://youtube.com/@capitalinvestors" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-luxury-gold hover:border-luxury-gold transition-all" title="YouTube"><i class="fab fa-youtube text-lg"></i></a>
+                        <a href="https://facebook.com/capitalinvestors" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-luxury-gold hover:border-luxury-gold transition-all" title="Facebook"><i class="fab fa-facebook-f text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.4em] border-t border-white/10 pt-8 mt-8">
+                <p class="text-white/20">&copy; 2026 CAPITAL INVESTORS. ALL RIGHTS RESERVED.</p>
+                <p class="mt-4 md:mt-0 text-white/20">Designed by <a href="https://instagram.com/funniii_media" target="_blank" class="text-luxury-gold hover:text-white transition-colors font-bold">@funniii_media</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const propertyCards = document.querySelectorAll('.property-card');
+            const searchInput = document.getElementById('project-search');
+
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            const updateDisplay = () => {
+                propertyCards.forEach(card => {
+                    const location = card.getAttribute('data-location');
+                    const projectName = card.querySelector('h3').textContent.toLowerCase();
+                    
+                    const matchesFilter = activeFilter === 'all' || location === activeFilter;
+                    const matchesSearch = projectName.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            };
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-luxury-dark', 'text-white', 'active');
+                        b.classList.add('bg-gray-100', 'text-gray-400');
+                    });
+                    btn.classList.add('bg-luxury-dark', 'text-white', 'active');
+                    btn.classList.remove('bg-gray-100', 'text-gray-400');
+
+                    activeFilter = btn.getAttribute('data-filter');
+                    updateDisplay();
+                });
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                updateDisplay();
+            });
+        });
+    </script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919908501197" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute top-0 right-0 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold border-2 border-white shadow-lg">1</span>
+        <span class="absolute right-full mr-4 bg-white text-luxury-dark px-4 py-2 rounded-xl text-xs font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-4 group-hover:translate-x-0 whitespace-nowrap pointer-events-none uppercase tracking-widest border border-gray-100">Chat with us</span>
+        <div class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></div>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
