@@ -12,15 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
     const nav = document.getElementById('navbar');
     if (nav) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { 
-                nav.classList.add('glass-dark', 'py-4'); 
-                nav.classList.remove('py-6'); 
-            } else { 
-                nav.classList.remove('glass-dark', 'py-4'); 
-                nav.classList.add('py-6'); 
+        // Only pages with a hero section (index.html) should start transparent
+        const isTransparentNavbar = nav.classList.contains('nav-transparent');
+        
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-dark', 'py-4');
+                nav.classList.remove('py-6');
+                if (isTransparentNavbar) nav.classList.remove('bg-transparent');
+            } else {
+                if (isTransparentNavbar) {
+                    nav.classList.remove('glass-dark', 'py-4');
+                    nav.classList.add('py-6', 'bg-transparent');
+                } else {
+                    nav.classList.add('glass-dark', 'py-4');
+                    nav.classList.remove('py-6');
+                }
             }
-        });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
     }
 
     // Mobile Menu Toggle
@@ -31,14 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
         });
     }
 
     if (closeMenuBtn && mobileMenu) {
         closeMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = ''; // Restore scrolling
         });
     }
+
+    // Close menu on link click
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+    });
 
     // Contact Form Handling
     const contactForm = document.getElementById('contact-form');
@@ -50,3 +73,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

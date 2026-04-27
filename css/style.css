@@ -2,6 +2,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     background-color: #ffffff; 
     color: #0B0B0B; 
+    overflow-x: hidden;
 }
 
 .font-playfair { 
@@ -9,9 +10,10 @@ body {
 }
 
 .glass-dark { 
-    background: rgba(0, 0, 0, 0.8); 
-    backdrop-filter: blur(12px); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+    background: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
 }
 
 .gold-bg-gradient { 
@@ -20,7 +22,7 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { 
-    width: 8px; 
+    width: 6px; 
 }
 ::-webkit-scrollbar-track { 
     background: #f1f1f1; 
@@ -29,3 +31,33 @@ body {
     background: #D4AF37; 
     border-radius: 10px; 
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    
+    .mobile-px {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.property-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu {
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.nav-transparent {
+    background: transparent;
+}
+
