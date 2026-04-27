@@ -16,6 +16,17 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
 }
 
+.glass-light { 
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+.text-luxury-dark {
+    color: #0B0B0B;
+}
+
 .gold-bg-gradient { 
     background: linear-gradient(135deg, #D4AF37 0%, #C5A021 100%); 
 }

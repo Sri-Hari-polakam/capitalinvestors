@@ -1,0 +1,93 @@
+const projectData = {
+    'sun-siri': {
+        name: 'Sun Siri Golden Gate',
+        location: 'Guntur, IRR Phase-3, Andhra Pradesh',
+        type: 'Premium Plots',
+        area: '22 Acres',
+        approval: 'APCRDA',
+        security: 'Gated Community',
+        description: 'Sun Siri Golden Gate is a class apart, offering a life beyond ordinary. Located in the heart of growth at Guntur IRR Phase-3, this 22-acre premium project features lush avenue plantations, 24/7 security, and solar-powered street lighting. It is meticulously crafted to elevate your everyday experience with wide blacktop roads and a well-planned water supply system.',
+        highlights: ['Luxury Club House', 'Buddha Statue', 'Kids Play Area', 'Outdoor Gym', 'Jogging Track', 'Guest Rooms'],
+        images: ['sun_siri_enhanced.png', 'gallery_living_room_1777110669810.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_home_cinema_v2_1777110956946.png'],
+        brochure: 'pdf/Golden Gate Final Brochure.pdf',
+        whatsappMsg: 'I would like to book a site visit for Sun Siri Golden Gate'
+    },
+    'alohaa': {
+        name: 'Alohaa Beach Resort',
+        location: 'Bapatla Coast, Andhra Pradesh',
+        type: 'Cottages & Plots',
+        area: '15 Acres',
+        approval: 'LP Approved',
+        security: 'Beachfront Gated',
+        description: 'Experience the pinnacle of coastal living at Alohaa Beach Resort. Nestled along the pristine Bapatla coast, this unique development offers a blend of luxury cottages and premium plots. Wake up to the sound of waves and enjoy exclusive access to world-class resort amenities, making every day feel like a vacation.',
+        highlights: ['Private Beach Access', 'Infinity Pool', 'Beachfront Cafe', 'Coconut Groves', 'Water Sports Area', 'Weekend Retreats'],
+        images: ['alohaa_beach_enhanced.png', 'gallery_infinity_pool_1777110687831.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_garden_v2_1777110805639.png'],
+        brochure: 'pdf/Sri Bhramara Alohaa Broucher.pdf',
+        whatsappMsg: 'I would like to book a site visit for Alohaa Beach Resort'
+    },
+    'regal-city': {
+        name: 'Sri Bhramara Regal City',
+        location: 'Poranki, Vijayawada, Andhra Pradesh',
+        type: 'Elite Open Plots',
+        area: '30 Acres',
+        approval: 'VMC / CRDA',
+        security: '24/7 Surveillance',
+        description: 'Regal City by Sri Bhramara is designed for those who seek a majestic lifestyle in the rapidly growing city of Vijayawada. Located in Poranki, this elite gated community offers perfectly planned open plots with modern infrastructure, underground drainage, and beautifully landscaped parks.',
+        highlights: ['Grand Entrance Arch', 'Underground Utilities', 'Avenue Plantation', 'Childrens Park', 'Strategic Location', 'Clear Title'],
+        images: ['regal_city_enhanced.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_home_cinema_v2_1777110956946.png'],
+        brochure: 'pdf/Regal City_Final.pdf',
+        whatsappMsg: 'I would like to book a site visit for Regal City'
+    },
+    'the-lotus': {
+        name: 'The Lotus',
+        location: 'Ponnekallu, Amaravati, Andhra Pradesh',
+        type: 'Future Villa Plots',
+        area: '25 Acres',
+        approval: 'APCRDA',
+        security: 'Secured Perimeter',
+        description: 'The Lotus represents the blossoming future of Amaravati. This serene development in Ponnekallu offers premium villa plots designed with spiritual and modern aesthetics in mind. Featuring a grand entrance with a majestic Buddha statue, it provides a peaceful sanctuary for your dream home.',
+        highlights: ['Meditation Zone', 'Buddha Plaza', 'Wide Internal Roads', 'Solar Lighting', 'Rainwater Harvesting', 'Vaastu Compliant'],
+        images: ['the_lotus_enhanced.png', 'gallery_garden_v2_1777110805639.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_living_room_1777110669810.png'],
+        brochure: 'pdf/Sunsiri The Lotus Brochure.pdf',
+        whatsappMsg: 'I would like to book a site visit for The Lotus'
+    },
+    'sbt-ajanthaa': {
+        name: 'SBT Ajanthaa',
+        location: 'Suryalanka Road, Bapatla, Andhra Pradesh',
+        type: 'Luxury Duplex & Plots',
+        area: '18 Acres',
+        approval: 'DTCP Approved',
+        security: 'Smart Security',
+        description: 'SBT Ajanthaa brings contemporary luxury to the heritage-rich region of Bapatla. Located strategically on Suryalanka Road, this project offers a mix of high-end duplex villas and premium plots, crafted with architectural excellence and attention to detail.',
+        highlights: ['Modern Clubhouse', 'Designer Landscaping', 'Smart Home Ready', 'Mini Theater', 'Gymnasium', '24/7 Water Supply'],
+        images: ['C:\\Users\\23000\\.gemini\\antigravity\\brain\\8b6b0dcb-3b86-4f90-8edc-557de0583e5e\\media__1777273658711.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_living_room_1777110669810.png', 'gallery_infinity_pool_1777110687831.png'],
+        brochure: 'pdf/SBT_Ajanthaa Brochure_Booklet.pdf',
+        whatsappMsg: 'I would like to book a site visit for SBT Ajanthaa'
+    },
+    'the-icon': {
+        name: 'The Icon',
+        location: 'Tadikonda, Amaravati, Andhra Pradesh',
+        type: 'Premium Plots',
+        area: '20 Acres',
+        approval: 'APCRDA',
+        security: '24/7 Gated Security',
+        description: 'The Icon is a prestigious residential plot development located in the heart of Amaravati. Designed for those who appreciate the finer things in life, it offers a perfect blend of modern infrastructure and natural beauty, ensuring a high-quality living experience.',
+        highlights: ['Grand Entrance Arch', 'Underground Drainage', 'Avenue Plantation', 'Children\'s Play Area', 'Clubhouse Facility', 'Strategic Connectivity'],
+        images: ['WhatsApp%20Image%202026-04-27%20at%201.03.59%20PM%20(1).jpeg', 'gallery_living_room_1777110669810.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_modern_bedroom_1777110703803.png'],
+        brochure: 'pdf/The Icon Folder_19-06-24-V4.pdf',
+        whatsappMsg: 'I would like to book a site visit for The Icon'
+    },
+    'the-meadows': {
+        name: 'The Meadows',
+        location: 'Ganguru, Vijayawada, Andhra Pradesh',
+        type: 'Villa Enclave',
+        area: '12 Acres',
+        approval: 'VMC Approved',
+        security: 'Secured Community',
+        description: 'The Meadows is an exclusive villa enclave designed for premium living. Located in the serene surroundings of Ganguru, it offers a peaceful retreat from the city hustle while maintaining excellent connectivity to major landmarks in Vijayawada.',
+        highlights: ['Eco-friendly Design', 'Landscaped Gardens', 'Jogging Tracks', 'Solar Street Lighting', 'Overhead Water Tank', 'Blacktop Roads'],
+        images: ['WhatsApp%20Image%202026-04-27%20at%2012.56.10%20PM.jpeg', 'gallery_garden_v2_1777110805639.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_infinity_pool_1777110687831.png'],
+        brochure: 'pdf/The Meadows draft brochure 09-05-25.pdf',
+        whatsappMsg: 'I would like to book a site visit for The Meadows'
+    }
+};

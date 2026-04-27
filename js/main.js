@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                nav.classList.add('glass-dark', 'py-4');
+                nav.classList.add('glass-light', 'py-4');
                 nav.classList.remove('py-6');
                 if (isTransparentNavbar) nav.classList.remove('bg-transparent');
             } else {
                 if (isTransparentNavbar) {
-                    nav.classList.remove('glass-dark', 'py-4');
+                    nav.classList.remove('glass-light', 'py-4');
                     nav.classList.add('py-6', 'bg-transparent');
                 } else {
-                    nav.classList.add('glass-dark', 'py-4');
+                    nav.classList.add('glass-light', 'py-4');
                     nav.classList.remove('py-6');
                 }
             }
