@@ -1,29 +1,29 @@
 const projectData = {
     'sun-siri': {
-        name: 'Sun Siri Golden Gate',
-        location: 'Guntur, IRR Phase-3, Andhra Pradesh',
+        name: 'Sun Siri Rise-2',
+        location: 'Amaravathi, Khaza toll, Andhra Pradesh',
         type: 'Premium Plots',
         area: '22 Acres',
         approval: 'APCRDA',
         security: 'Gated Community',
-        description: 'Sun Siri Golden Gate is a class apart, offering a life beyond ordinary. Located in the heart of growth at Guntur IRR Phase-3, this 22-acre premium project features lush avenue plantations, 24/7 security, and solar-powered street lighting. It is meticulously crafted to elevate your everyday experience with wide blacktop roads and a well-planned water supply system.',
+        description: 'Sun Siri Rise-2 is a class apart, offering a life beyond ordinary. Located in the heart of growth at Amaravathi Khaza toll, this 22-acre premium project features lush avenue plantations, 24/7 security, and solar-powered street lighting. It is meticulously crafted to elevate your everyday experience with wide blacktop roads and a well-planned water supply system.',
         highlights: ['Luxury Club House', 'Buddha Statue', 'Kids Play Area', 'Outdoor Gym', 'Jogging Track', 'Guest Rooms'],
         images: ['sun_siri_enhanced.png', 'gallery_living_room_1777110669810.png', 'gallery_luxury_hallway_v2_1777110941411.png', 'gallery_home_cinema_v2_1777110956946.png'],
-        brochure: 'pdf/Golden Gate Final Brochure.pdf',
-        whatsappMsg: 'I would like to book a site visit for Sun Siri Golden Gate'
+        brochure: 'pdf/Sunsiri The Rise Brochure.pdf',
+        whatsappMsg: 'I would like to book a site visit for Sun Siri Rise-2'
     },
-    'alohaa': {
-        name: 'Alohaa Beach Resort',
-        location: 'Bapatla Coast, Andhra Pradesh',
-        type: 'Cottages & Plots',
+    'the-royal': {
+        name: 'Sun Siri The Royal',
+        location: 'Paritala, Andhra Pradesh',
+        type: 'Plots',
         area: '15 Acres',
-        approval: 'LP Approved',
-        security: 'Beachfront Gated',
-        description: 'Experience the pinnacle of coastal living at Alohaa Beach Resort. Nestled along the pristine Bapatla coast, this unique development offers a blend of luxury cottages and premium plots. Wake up to the sound of waves and enjoy exclusive access to world-class resort amenities, making every day feel like a vacation.',
-        highlights: ['Private Beach Access', 'Infinity Pool', 'Beachfront Cafe', 'Coconut Groves', 'Water Sports Area', 'Weekend Retreats'],
-        images: ['alohaa_beach_enhanced.png', 'gallery_infinity_pool_1777110687831.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_garden_v2_1777110805639.png'],
-        brochure: 'pdf/Sri Bhramara Alohaa Broucher.pdf',
-        whatsappMsg: 'I would like to book a site visit for Alohaa Beach Resort'
+        approval: 'APCRDA Approved',
+        security: 'Gated',
+        description: 'Experience the pinnacle of living at Sun Siri The Royal. Nestled in Paritala, this unique development offers premium plots. Wake up to serene surroundings and enjoy exclusive access to world-class amenities.',
+        highlights: ['Grand Entrance', 'Avenue Plantation', 'Childrens Play Area', '24/7 Security', 'Wide Roads', 'Clear Title'],
+        images: ['ChatGPT Image Apr 28, 2026, 05_19_39 PM.png', 'gallery_infinity_pool_1777110687831.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_garden_v2_1777110805639.png'],
+        brochure: 'pdf/Sunsiri The Royal Brochure 27-01-2026.pdf',
+        whatsappMsg: 'I would like to book a site visit for Sun Siri The Royal'
     },
     'regal-city': {
         name: 'Sri Bhramara Regal City',
