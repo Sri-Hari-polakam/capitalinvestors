@@ -26,12 +26,12 @@
 <body class="bg-white">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 glass-dark transition-all duration-500">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 glass-light transition-all duration-500">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-widest text-white font-playfair uppercase">
+            <a href="index.html" class="text-2xl font-bold tracking-widest text-luxury-dark font-playfair uppercase">
                 CAPITAL<span class="text-luxury-gold">INVESTORS</span>
             </a>
-            <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-widest text-white/80">
+            <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-widest text-luxury-dark">
                 <a href="index.html" class="hover:text-luxury-gold transition-colors font-semibold">Home</a>
                 <a href="properties.html" class="hover:text-luxury-gold transition-colors font-semibold">Properties</a>
                 <a href="about.html" class="hover:text-luxury-gold transition-colors font-semibold">About Us</a>
@@ -41,36 +41,36 @@
                 </a>
             </div>
             
-            <button class="md:hidden text-white" id="mobile-menu-btn">
+            <button class="md:hidden text-luxury-dark" id="mobile-menu-btn">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] glass-dark transform translate-x-full transition-transform duration-500 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[60] glass-light transform translate-x-full transition-transform duration-500 md:hidden">
         <div class="flex flex-col h-full p-8">
             <div class="flex justify-between items-center mb-16">
-                <a href="index.html" class="text-2xl font-bold tracking-widest text-white font-playfair uppercase">
+                <a href="index.html" class="text-2xl font-bold tracking-widest text-luxury-dark font-playfair uppercase">
                     CAPITAL<span class="text-luxury-gold">INVESTORS</span>
                 </a>
-                <button id="close-menu" class="text-white">
+                <button id="close-menu" class="text-luxury-dark">
                     <i class="fas fa-times text-2xl"></i>
                 </button>
             </div>
             
             <div class="flex flex-col gap-8 text-center">
-                <a href="index.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">Home</a>
-                <a href="properties.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">Properties</a>
-                <a href="about.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">About Us</a>
-                <a href="contact.html" class="text-3xl font-bold text-white/80 hover:text-luxury-gold font-playfair transition-colors">Contact</a>
+                <a href="index.html" class="text-3xl font-bold text-luxury-dark/80 hover:text-luxury-gold font-playfair transition-colors">Home</a>
+                <a href="properties.html" class="text-3xl font-bold text-luxury-dark/80 hover:text-luxury-gold font-playfair transition-colors">Properties</a>
+                <a href="about.html" class="text-3xl font-bold text-luxury-dark/80 hover:text-luxury-gold font-playfair transition-colors">About Us</a>
+                <a href="contact.html" class="text-3xl font-bold text-luxury-dark/80 hover:text-luxury-gold font-playfair transition-colors">Contact</a>
                 <a href="https://wa.me/919848423939" class="gold-bg-gradient text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm mt-4 flex items-center justify-center gap-2">Enquire Now</a>
             </div>
             
-            <div class="mt-auto pt-10 border-t border-white/10 flex justify-center gap-8">
-                <a href="https://www.instagram.com/ks_realestate_tv?igsh=OTZ5OG9wZDJ0bmpk" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/919848423939" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:capitalincestors@gmail.com" class="text-white/40 hover:text-luxury-gold text-2xl transition-colors"><i class="far fa-envelope"></i></a>
+            <div class="mt-auto pt-10 border-t border-black/10 flex justify-center gap-8">
+                <a href="https://www.instagram.com/ks_realestate_tv?igsh=OTZ5OG9wZDJ0bmpk" class="text-luxury-dark/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919848423939" class="text-luxury-dark/40 hover:text-luxury-gold text-2xl transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:capitalincestors@gmail.com" class="text-luxury-dark/40 hover:text-luxury-gold text-2xl transition-colors"><i class="far fa-envelope"></i></a>
             </div>
         </div>
     </div>
@@ -167,21 +167,26 @@
             // Populate Content
             const content = `
                 <!-- Gallery Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[500px] mb-12 md:mb-16" data-aos="fade-up">
-                    <div class="md:col-span-2 h-64 md:h-full rounded-3xl overflow-hidden group">
-                        <img src="images/${project.images[0]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="${project.name}">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12 md:mb-16" data-aos="fade-up">
+                    <div class="md:col-span-2 aspect-[4/3] md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden relative group">
+                        <img src="${project.images[0].startsWith('pdf/') || project.images[0].startsWith('images/') ? project.images[0] : 'images/' + project.images[0]}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="${project.name}">
                     </div>
-                    <div class="md:col-span-1 h-auto md:h-full grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-4">
-                        <div class="h-40 md:h-full rounded-3xl overflow-hidden group">
-                            <img src="images/${project.images[1]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="md:col-span-1 flex flex-col gap-4 h-full md:h-[500px]">
+                        <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM.jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Luxury Interior">
                         </div>
-                        <div class="h-40 md:h-full rounded-3xl overflow-hidden group">
-                            <img src="images/${project.images[2]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
+                            <img src="images/ChatGPT Image Apr 28, 2026, 03_57_51 PM.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Enhanced Home Screen">
                         </div>
                     </div>
-                    <div class="md:col-span-1 h-48 md:h-full rounded-3xl overflow-hidden relative group">
-                        <img src="images/${project.images[3]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center font-bold text-white text-xl">+24 Photos</div>
+                    <div class="md:col-span-1 flex flex-col gap-4 h-full md:h-[500px]">
+                        <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (1).jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Grand Entrance">
+                        </div>
+                        <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (2).jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Home Theater">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center font-bold text-white text-xl md:text-2xl lg:text-3xl">+24 Photos</div>
+                        </div>
                     </div>
                 </div>
 
@@ -189,9 +194,9 @@
                     <!-- Left: Details -->
                     <div class="lg:w-2/3" data-aos="fade-right">
                         <div class="mb-10 text-left">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-luxury-gold/10 text-luxury-gold px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">New Construction</span>
-                                <span class="bg-green-50 text-green-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Ready to Move</span>
+                            <div class="flex flex-wrap items-center gap-3 mb-5">
+                                <span class="inline-flex items-center justify-center bg-luxury-gold/10 text-luxury-gold px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest leading-none border border-luxury-gold/20 pt-2">New Construction</span>
+                                <span class="inline-flex items-center justify-center bg-green-50 text-green-600 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest leading-none border border-green-200 pt-2">Ready to Move</span>
                             </div>
                             <h1 class="text-3xl md:text-5xl font-bold font-playfair mb-4 text-luxury-dark leading-tight">${project.name}</h1>
                             <div class="flex items-center gap-2 text-gray-400 text-sm md:text-base">
@@ -200,32 +205,40 @@
                         </div>
 
                         <!-- Stats -->
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-gray-100 mb-10 text-left">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2 mb-1">
-                                    <i class="fas fa-home text-luxury-gold text-lg"></i>
-                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest">Type</span>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-left">
+                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="bg-luxury-gold/10 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-luxury-gold transition-colors duration-300">
+                                        <i class="fas fa-home text-luxury-gold group-hover:text-white text-lg transition-colors duration-300"></i>
+                                    </div>
+                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest group-hover:text-luxury-dark transition-colors duration-300">Type</span>
                                 </div>
                                 <div class="font-bold text-sm md:text-base text-luxury-dark">${project.type}</div>
                             </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2 mb-1">
-                                    <i class="fas fa-expand text-luxury-gold text-lg"></i>
-                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest">Total Area</span>
+                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="bg-luxury-gold/10 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-luxury-gold transition-colors duration-300">
+                                        <i class="fas fa-expand text-luxury-gold group-hover:text-white text-lg transition-colors duration-300"></i>
+                                    </div>
+                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest group-hover:text-luxury-dark transition-colors duration-300">Total Area</span>
                                 </div>
                                 <div class="font-bold text-sm md:text-base text-luxury-dark">${project.area}</div>
                             </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2 mb-1">
-                                    <i class="fas fa-certificate text-luxury-gold text-lg"></i>
-                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest">Approval</span>
+                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="bg-luxury-gold/10 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-luxury-gold transition-colors duration-300">
+                                        <i class="fas fa-certificate text-luxury-gold group-hover:text-white text-lg transition-colors duration-300"></i>
+                                    </div>
+                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest group-hover:text-luxury-dark transition-colors duration-300">Approval</span>
                                 </div>
                                 <div class="font-bold text-sm md:text-base text-luxury-dark">${project.approval}</div>
                             </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2 mb-1">
-                                    <i class="fas fa-shield-halved text-luxury-gold text-lg"></i>
-                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest">Security</span>
+                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="bg-luxury-gold/10 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-luxury-gold transition-colors duration-300">
+                                        <i class="fas fa-shield-halved text-luxury-gold group-hover:text-white text-lg transition-colors duration-300"></i>
+                                    </div>
+                                    <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest group-hover:text-luxury-dark transition-colors duration-300">Security</span>
                                 </div>
                                 <div class="font-bold text-sm md:text-base text-luxury-dark">${project.security}</div>
                             </div>
@@ -240,9 +253,11 @@
                             <h3 class="text-2xl font-bold font-playfair mb-6 text-luxury-dark">Project Highlights</h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                 ${project.highlights.map(h => `
-                                    <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                                        <i class="fas fa-check-circle text-luxury-gold text-base mt-0.5"></i> 
-                                        <span class="font-medium text-sm text-luxury-dark leading-snug">${h}</span>
+                                    <div class="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1 transition-all duration-300 group">
+                                        <div class="bg-luxury-gold/10 w-8 h-8 shrink-0 rounded-full flex items-center justify-center group-hover:bg-luxury-gold transition-colors duration-300 mt-0.5">
+                                            <i class="fas fa-check text-luxury-gold group-hover:text-white text-xs transition-colors duration-300"></i> 
+                                        </div>
+                                        <span class="font-medium text-sm text-gray-600 leading-snug group-hover:text-luxury-dark transition-colors duration-300">${h}</span>
                                     </div>
                                 `).join('')}
                             </div>

@@ -60,7 +60,7 @@ const projectData = {
         security: 'Smart Security',
         description: 'SBT Ajanthaa brings contemporary luxury to the heritage-rich region of Bapatla. Located strategically on Suryalanka Road, this project offers a mix of high-end duplex villas and premium plots, crafted with architectural excellence and attention to detail.',
         highlights: ['Modern Clubhouse', 'Designer Landscaping', 'Smart Home Ready', 'Mini Theater', 'Gymnasium', '24/7 Water Supply'],
-        images: ['C:\\Users\\23000\\.gemini\\antigravity\\brain\\8b6b0dcb-3b86-4f90-8edc-557de0583e5e\\media__1777273658711.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_living_room_1777110669810.png', 'gallery_infinity_pool_1777110687831.png'],
+        images: ['pdf/media__1777273658711.png', 'gallery_modern_bedroom_1777110703803.png', 'gallery_living_room_1777110669810.png', 'gallery_infinity_pool_1777110687831.png'],
         brochure: 'pdf/SBT_Ajanthaa Brochure_Booklet.pdf',
         whatsappMsg: 'I would like to book a site visit for SBT Ajanthaa'
     },
