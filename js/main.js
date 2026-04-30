@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize AOS Animations
     if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 800, once: true, disable: 'mobile' });
     }
 
     // Navbar Scroll Effect
