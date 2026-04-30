@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Details | LUXE ESTATE</title>
+    <title>Property Details | Capital Investors</title>
+    <meta name="description" content="View detailed information about premium luxury real estate properties and open plots by Capital Investors. Find amenities, location highlights, and pricing.">
+    <meta name="keywords" content="property details, luxury real estate, open plots, Capital Investors property, land details, investment">
+    <meta property="og:title" content="Property Details | Capital Investors">
+    <meta property="og:description" content="View detailed information about premium luxury real estate properties by Capital Investors.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,15 +27,47 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+
     <script src="js/tailwind-config.js"></script>
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Capital Investors",
+      "image": "images/WhatsApp Image 2026-04-27 at 1.12.17 PM.webp",
+      "url": "https://capitalinvestors.info/",
+      "telephone": "+919848423939",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#59A - 21/3-2A, R.R. Gardens VijayaNagar Colony, Patamata",
+        "addressLocality": "Vijayawada",
+        "postalCode": "520010",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.1588905,
+        "longitude": 79.3168273
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1KvyBvYJ3E/",
+        "https://www.instagram.com/ks_realestate_tv?igsh=OTZ5OG9wZDJ0bmpk",
+        "https://www.youtube.com/@Kanna2706"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-white">
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 glass-light transition-all duration-500">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-widest text-luxury-dark font-playfair uppercase">
+            <a href="index.html" class="text-lg md:text-2xl font-bold tracking-wider md:tracking-widest text-luxury-dark font-playfair uppercase">
                 CAPITAL<span class="text-luxury-gold">INVESTORS</span>
             </a>
             <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-widest text-luxury-dark">
@@ -51,7 +90,7 @@
     <div id="mobile-menu" class="fixed inset-0 z-[60] glass-light transform translate-x-full transition-transform duration-500 md:hidden">
         <div class="flex flex-col h-full p-8">
             <div class="flex justify-between items-center mb-16">
-                <a href="index.html" class="text-2xl font-bold tracking-widest text-luxury-dark font-playfair uppercase">
+                <a href="index.html" class="text-lg md:text-2xl font-bold tracking-wider md:tracking-widest text-luxury-dark font-playfair uppercase">
                     CAPITAL<span class="text-luxury-gold">INVESTORS</span>
                 </a>
                 <button id="close-menu" class="text-luxury-dark">
@@ -147,9 +186,9 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/project-data.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/project-data.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
@@ -173,18 +212,18 @@
                     </div>
                     <div class="md:col-span-1 flex flex-col gap-4 h-full md:h-[500px]">
                         <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
-                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM.jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Luxury Interior">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM.webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Luxury Interior">
                         </div>
                         <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
-                            <img src="images/ChatGPT Image Apr 28, 2026, 03_57_51 PM.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Enhanced Home Screen">
+                            <img src="images/ChatGPT Image Apr 28, 2026, 03_57_51 PM.webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Enhanced Home Screen">
                         </div>
                     </div>
                     <div class="md:col-span-1 flex flex-col gap-4 h-full md:h-[500px]">
                         <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
-                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (1).jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Grand Entrance">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (1).webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Grand Entrance">
                         </div>
                         <div class="aspect-video md:aspect-auto flex-1 rounded-3xl overflow-hidden relative group min-h-0">
-                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (2).jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Home Theater">
+                            <img src="images/WhatsApp Image 2026-04-27 at 1.03.58 PM (2).webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Home Theater">
                             <div class="absolute inset-0 bg-black/40 flex items-center justify-center font-bold text-white text-xl md:text-2xl lg:text-3xl">+24 Photos</div>
                         </div>
                     </div>
